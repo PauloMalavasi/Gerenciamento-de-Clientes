@@ -2,6 +2,7 @@ package com.ph.clientes.Services;
 
 import com.ph.clientes.Entity.ClientesEntity;
 import com.ph.clientes.Repository.ClientesRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,21 +11,22 @@ import java.util.Optional;
 @Service
 public class ClienteService {
 
-    public ClientesRepository clientesRepository;
-
-    public ClientesEntity create(ClientesEntity clientes){
-        return clientesRepository.save(clientes);
-    }
+    @Autowired
+    public ClientesRepository clienteRepository;
 
     public List<ClientesEntity> findAll(){
-        return clientesRepository.findAll();
+        return clienteRepository.findAll();
     }
 
-    public Optional<ClientesEntity> findById(Long id){
-        return clientesRepository.findById(id);
+    public ClientesEntity create(ClientesEntity clienteEntity){
+        return clienteRepository.save(clienteEntity);
     }
 
     public void delete(Long id){
-        clientesRepository.deleteById(id);
+        clienteRepository.deleteById(id);
+    }
+
+    public Optional<ClientesEntity> findId(Long id){
+        return clienteRepository.findById(id);
     }
 }
