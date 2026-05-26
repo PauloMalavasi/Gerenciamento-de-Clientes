@@ -18,8 +18,13 @@ public class SecurityFilter {
                 .sessionManagement( session ->
                         session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth ->
-                        auth.requestMatchers(HttpMethod.GET, "/clientes").permitAll())
-                .build();
+                        auth.requestMatchers(HttpMethod.GET, "/clientes").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/clientes").permitAll()
+                                .requestMatchers(HttpMethod.GET, "/clientes/**").permitAll()
+                                .requestMatchers(HttpMethod.DELETE, "/clientes/**").permitAll()
+
+                )
+        .build();
     }
 
 }
