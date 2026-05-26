@@ -1,4 +1,4 @@
-package com.ph.clientes.Config;
+package com.ph.clientes.config;
 
 import org.springframework.context.annotation.Configuration;
 

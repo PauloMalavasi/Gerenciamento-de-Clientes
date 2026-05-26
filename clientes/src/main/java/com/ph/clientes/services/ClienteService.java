@@ -1,7 +1,7 @@
-package com.ph.clientes.Services;
+package com.ph.clientes.services;
 
-import com.ph.clientes.Entity.ClientesEntity;
-import com.ph.clientes.Repository.ClientesRepository;
+import com.ph.clientes.entity.ClientesEntity;
+import com.ph.clientes.repository.ClientesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

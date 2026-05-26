@@ -1,8 +1,8 @@
-package com.ph.clientes.Controller;
+package com.ph.clientes.controller;
 
 
-import com.ph.clientes.Entity.ClientesEntity;
-import com.ph.clientes.Services.ClienteService;
+import com.ph.clientes.entity.ClientesEntity;
+import com.ph.clientes.services.ClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
