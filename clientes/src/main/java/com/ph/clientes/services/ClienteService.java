@@ -29,4 +29,12 @@ public class ClienteService {
     public Optional<ClientesEntity> findId(Long id){
         return clienteRepository.findById(id);
     }
+    public ClientesEntity update(ClientesEntity cliente, Long id){
+        ClientesEntity response = clienteRepository.findById(id).get();
+        response.setEmail(cliente.getEmail());
+        response.setNome(cliente.getNome());
+        response.setTelefone(cliente.getTelefone());
+        return clienteRepository.save(response);
+    }
+
 }

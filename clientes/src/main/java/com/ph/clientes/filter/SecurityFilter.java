@@ -19,12 +19,13 @@ public class SecurityFilter {
                         session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth ->
                         auth.requestMatchers(HttpMethod.GET, "/clientes").permitAll()
-                        .requestMatchers(HttpMethod.POST, "/clientes").permitAll()
+                                .requestMatchers(HttpMethod.POST, "/clientes").permitAll()
                                 .requestMatchers(HttpMethod.GET, "/clientes/**").permitAll()
                                 .requestMatchers(HttpMethod.DELETE, "/clientes/**").permitAll()
+                                .requestMatchers(HttpMethod.PUT, "/clientes/**").permitAll()
 
                 )
-        .build();
+                .build();
     }
 
 }

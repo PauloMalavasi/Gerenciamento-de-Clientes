@@ -34,4 +34,9 @@ public class ClienteController {
     public void delete(@PathVariable Long id){
         clienteService.delete(id);
     }
+
+    @PutMapping("/{id}")
+    public ClientesEntity update(@RequestBody ClientesEntity clientes, @PathVariable Long id){
+        return clienteService.update(clientes, id);
+    }
 }
