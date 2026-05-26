@@ -1,5 +1,6 @@
 package com.ph.clientes.entity;
 
+import com.ph.clientes.enums.ClientesEnum;
 import jakarta.persistence.*;
 
 @Entity
@@ -13,6 +14,9 @@ public class ClientesEntity {
     private String email;
     @Column(name = "telefoneCliente")
     private String telefone;
+
+    private ClientesEnum login;
+    private String password;
 
     public ClientesEntity() {
     }
