@@ -3,8 +3,8 @@ package com.ph.clientes.entity;
 import com.ph.clientes.enums.ClientesEnum;
 import jakarta.persistence.*;
 
-@Entity
-@Table(name = "tb_cliente")
+@Entity //Representa um classe do mundo real
+@Table(name = "tb_cliente") //Definir o nome da tabela no banco
 public class ClientesEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

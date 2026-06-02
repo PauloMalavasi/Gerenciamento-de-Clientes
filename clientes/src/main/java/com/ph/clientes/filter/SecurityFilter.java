@@ -8,11 +8,11 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
 
-@Configuration
-@EnableWebSecurity
+@Configuration //Indica a configuração
+@EnableWebSecurity //Desabilitada a segurança web
 public class SecurityFilter {
 
-    @Bean
+    @Bean // Indique um conjunto de permissões
     public SecurityFilterChain securityFilterChain(HttpSecurity http){
         return http.csrf(csrf -> csrf.disable())
                 .sessionManagement( session ->
